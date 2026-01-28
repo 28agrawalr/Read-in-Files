@@ -1,0 +1,12 @@
+elephant
+dog
+kitten
+lion
+whale
+tigers
+bears
+
+bald eagle
+
+cheetah
+hippo
