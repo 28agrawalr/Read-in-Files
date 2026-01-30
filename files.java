@@ -5,7 +5,7 @@ import java.io.*;
 public class files{
 
     public static void main(String[] args) throws FileNotFoundException{
-        File file = new File("animals.txt");
+        File file = new File("numbers.txt");
         Scanner scanner = new Scanner(file);
         int count = 0; 
         while(scanner.hasNext()){
@@ -18,21 +18,24 @@ public class files{
         scanner.close();
 
         Scanner sc = new Scanner(file);
-        String[] animals = new String[count];
+        //String[] animals = new String[count];
+        int[] numList = new int[count];
         int j=0;
          
         while(sc.hasNext()){
             String line = sc.nextLine().trim();
+            int num = Integer.parseInt(line);
             if(!line.isEmpty()){
-                animals[j]=line;
+                numList[j]=num;
                 j++;
             }
         }
 
+        System.out.println("Value:"+(numList[2]+numList[6]));
         sc.close();
 
-        for(int i=0; i<animals.length;i++){
-            System.out.println(animals[i]);
+        for(int i=0; i<numList.length;i++){
+            System.out.println(numList[i]);
         }
 
 
